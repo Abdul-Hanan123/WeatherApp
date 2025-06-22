@@ -1,76 +1,125 @@
-body{
+body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: hsla(0, 0%, 95%);
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem;
 }
-.weatherForm{
-  margin: 20px;
+
+.weatherForm {
+  margin: 1.5rem;
+  width: 100%;
+  max-width: 500px;
 }
-.cityInput{
-  padding: 10px;
-  font-size: 2rem;
+
+.cityInput {
+  padding: 0.8rem;
+  font-size: 1.5rem;
   font-weight: bold;
   border: 2px solid hsla(0, 0%, 20%, 0.3);
   border-radius: 10px;
-  margin: 10px;
-  width: 300px;
+  margin: 0.5rem 0;
+  width: 100%;
+  box-sizing: border-box;
 }
-button[type = "submit"]{
-  padding: 10px 20px;
+
+button[type="submit"] {
+  padding: 0.8rem 1.5rem;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.5rem;
   background-color: hsl(122, 39%, 50%);
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  width: 100%;
 }
-button[type = "submit"]:hover{
+
+button[type="submit"]:hover {
   background-color: hsl(122, 39%, 40%);
 }
-.card{
-  background: linear-gradient(180deg, hsl(210, 100%, 75%),hsl(40, 100%, 75%));
-  padding: 50px;
+
+.card {
+  background: linear-gradient(180deg, hsl(210, 100%, 75%), hsl(40, 100%, 75%));
+  padding: 2rem;
   box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5);
-  min-width: 300px;
+  width: 100%;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
+  box-sizing: border-box;
 }
-h1{
-  font-size: 3.5rem;
+
+h1 {
+  font-size: 2.5rem;
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
-p{
-  font-size: 1.5rem;
-  margin: 5px 0;
+
+p {
+  font-size: 1.2rem;
+  margin: 0.3rem 0;
+  text-align: center;
 }
-.cityDisplay, .tempDisplay{
-  font-size: 3.5rem;
-  font-weight: bold;
-  color: hsla(0, 0%, 0%, 0.75);
-  margin-bottom: 25px;
-}
-.humidityDisplay{
-  font-weight: bold;
-  margin-bottom: 25px;
-}
-.descDisplay{
-  font-style: italic;
-  font-weight: bold;
-  font-size: 2rem;
-}
-.weatherEmoji{
-  margin: 0;
-  font-size: 7.5rem;
-}
-.errorDisplay{
+
+.cityDisplay,
+.tempDisplay {
   font-size: 2.5rem;
   font-weight: bold;
   color: hsla(0, 0%, 0%, 0.75);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.humidityDisplay {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.descDisplay {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.weatherEmoji {
+  margin: 0;
+  font-size: 5rem;
+}
+
+.errorDisplay {
+  font-size: 2rem;
+  font-weight: bold;
+  color: hsla(0, 0%, 0%, 0.75);
+  text-align: center;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .cityDisplay,
+  .tempDisplay {
+    font-size: 2rem;
+  }
+
+  .descDisplay {
+    font-size: 1.2rem;
+  }
+
+  .weatherEmoji {
+    font-size: 4rem;
+  }
+
+  .errorDisplay {
+    font-size: 1.5rem;
+  }
 }
